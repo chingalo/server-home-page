@@ -4,7 +4,8 @@
     "dependencies": {
         "body-parser": "^1.18.3",
         "commitizen": "^2.10.1",
-        "express": "^4.16.4"
+        "express": "^4.16.4",
+        "nodemailer": "^0.7.1"
     },
     "config": {
         "commitizen": {
