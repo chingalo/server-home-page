@@ -1,5 +1,4 @@
-[![dependencies Status](https://david-dm.org/chingalo/server-home-page/status.svg)](https://david-dm.org/chingalo/server-home-page)
-[![devDependencies Status](https://david-dm.org/hisptzards-static-table/dev-status.svg)](https://david-dm.org/chingalo/server-home-page?type=dev)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) 
 
 ## Prerequisites
 
