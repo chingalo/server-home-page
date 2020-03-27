@@ -13,10 +13,10 @@ app.use(bodyParser.urlencoded({
 app.use(`/static`, express.static(`static`));
 
 // adding routes
-app.get('/', function (req, res) {
-    res.sendFile(path.join(`${__dirname}/pages/home.html`));
+app.get('/', function(req, res) {
+    res.sendFile(path.join(`${__dirname}/pages/index.html`));
 });
-app.post('/send-email', function (req, res) {
+app.post('/send-email', function(req, res) {
     const {
         subject,
         _replyto,
