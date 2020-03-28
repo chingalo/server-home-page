@@ -48,7 +48,7 @@ app.post('/send-email', function(req, res) {
             } else {
                 console.log(JSON.stringify({ info }));
             }
-            // res.redirect('/');
+            res.redirect('/');
         })
     } catch (error) {
         console.log({ error })
