@@ -1,4 +1,5 @@
-const { emailConfig } = require('./config');
+const { emailConfig, users } = require('./config');
 module.exports = {
-    emailConfig
+    emailConfig,
+    users
 }
