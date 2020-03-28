@@ -27,29 +27,33 @@ app.post('/send-email', function(req, res) {
     try {
         const emailConfig = appConfig.emailConfig || {}
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: 'smtp.gmail.com',
+            port: 587,
+            secure: false,
+            requireTLS: true,
             auth: {
                 user: emailConfig.username || "",
                 pass: emailConfig.password || ""
             }
         });
         const mailOptions = {
-            from: `${name} ✔ <${_replyto}>`,
             to: _.join(appConfig.users || [], ","),
-            subject: `${subject}`,
-            text: `${message}`
+            subject: `${name} : ${subject} `,
+            html: `<b>Name : </b>${name} <br><b>E-mail : </b>${_replyto}<br><b>Message : </b>${message}`
         }
+        console.log(JSON.stringify({ mailOptions }))
         transporter.sendMail(mailOptions, function(error, info) {
             if (error) {
                 console.log(JSON.stringify({ error }));
             } else {
                 console.log(JSON.stringify({ info }));
             }
+            // res.redirect('/');
         })
     } catch (error) {
         console.log({ error })
+        res.redirect('/');
     }
-    res.redirect('/');
 });
 
 app.listen(3001);
